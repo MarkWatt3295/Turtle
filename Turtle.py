@@ -75,33 +75,13 @@ def startGame():
             for win in maxColor:
                 print(win)
 
-    oldScore = []
-    file = open('scores.txt', 'r')
-    for line in file:
-        l = line.split()
-        color = l[0]
-        score = l[1]
-        oldScore.append([color, score])
 
-    file.close()
-
-    file = open('scores.txt', 'w')
-
-    for entry in oldScore:
-        for winner in maxColor:
-            if entry[0] == winner:
-                entry[1] = int(entry[1]) + 1
-
-        file.write(str(entry[0]) + ' ' + str(entry[1]) + '\n')
-
-
-    file.close()
 
 startGame()
 
 while replay == True:
     print('-----------------------------------')
-    myvar = easygui.ccbox('Would you like to Race again?', title='Test')
+    myvar = easygui.ccbox('Would you like to Race again?', title='Race Turtles Again?')
     if(myvar == 1):
         startGame()
     else:
