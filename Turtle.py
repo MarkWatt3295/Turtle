@@ -75,8 +75,6 @@ def startGame():
             for win in maxColor:
                 print(win)
 
-
-
 startGame()
 
 while replay == True:
